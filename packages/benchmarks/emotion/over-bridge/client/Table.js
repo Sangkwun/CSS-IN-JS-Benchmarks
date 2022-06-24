@@ -3,7 +3,7 @@ import styled, { css } from 'react-emotion';
 import { buildStyles } from './utils';
 
 export const Component = styled.div`
-  ${({ ...props }) => buildStyles(props)}
+  ${props => buildStyles(props)}
 `;
 
 const Table = ({ table, toPercent }) => (

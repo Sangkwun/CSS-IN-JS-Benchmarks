@@ -1,5 +1,5 @@
 import { pick } from 'lodash-es';
-
+import { css } from 'react-emotion';
 const ComponentCSSDeclarations = [
   /* Layout Styles */
   'display',
@@ -149,9 +149,9 @@ export function buildBaseStyles(
   // const typographyStyles = buildTypographyStyles(props.typography);
   const baseStyles = buildCSSStyles(props);
 
-  const serializedStyles = css(typographyStyles, baseStyles);
+  // const serializedStyles = css(typographyStyles, baseStyles);
 
-  return serializedStyles;
+  return baseStyles;
 }
 
 // export function buildResponsiveStyles(

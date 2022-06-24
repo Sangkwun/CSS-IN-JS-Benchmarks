@@ -1,10 +1,10 @@
 {
-  "name": "table-emotion-css-mode-big-table",
+  "name": "table-emotion-css-mode-big-table2",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "devServer --package emotion/css-mode",
-    "build": "devBuild --package emotion/css-mode"
+    "start": "devServer --package emotion/over-bridge",
+    "build": "devBuild --package emotion/over-bridge"
   },
   "license": "MIT",
   "dependencies": {
