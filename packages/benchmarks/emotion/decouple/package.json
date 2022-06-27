@@ -8,10 +8,12 @@
   },
   "license": "MIT",
   "dependencies": {
-    "benchmarks-utils": "1.0.0",
-    "emotion": "^8.0.12",
-    "babel-plugin-emotion": "^8.0.12",
-    "react-emotion": "^8.0.12"
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/core": "10.3.1",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "babel-preset-es2020": "^1.0.2",
+    "benchmarks-utils": "1.0.0"
   },
   "devDependencies": {
     "dev-tasks": "1.0.0"

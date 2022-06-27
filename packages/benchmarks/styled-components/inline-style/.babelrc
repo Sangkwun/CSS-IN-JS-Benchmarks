@@ -1,17 +1,15 @@
 {
   "plugins": [
-    "transform-class-properties",
-    "styled-components"
+    "@babel/plugin-proposal-class-properties",
+    "babel-plugin-styled-components"
   ],
   "presets": [
-    ["es2015", { "modules": false }],
-    "react"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "react-hmre"
-      ]
-    }
-  }
+    ["@babel/preset-env"],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
 }

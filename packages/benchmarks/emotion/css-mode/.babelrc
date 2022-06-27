@@ -1,17 +1,19 @@
 {
   "plugins": [
-    "transform-class-properties",
-    ["emotion"]
+    ["@emotion/babel-plugin",{ 
+      "sourceMap": true,
+      "autoLabel": "dev-only",
+      "labelFormat": "[local]",
+      "cssPropOptimization": true
+    }]
   ],
   "presets": [
-    ["es2015", { "modules": false }],
-    "react"
-  ],
-  "env": {
-    "development": {
-      "presets": [
-        "react-hmre"
-      ]
-    }
-  }
+    ["@babel/preset-env"],
+    [
+      "@babel/preset-react",
+      {
+        "runtime": "automatic"
+      }
+    ]
+  ]
 }

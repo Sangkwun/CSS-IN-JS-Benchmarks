@@ -1,5 +1,6 @@
 import { pick } from 'lodash-es';
-import { css } from 'react-emotion';
+import { css } from '@emotion/react';
+
 const ComponentCSSDeclarations = [
   /* Layout Styles */
   'display',
