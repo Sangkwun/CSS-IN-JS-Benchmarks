@@ -3,21 +3,21 @@ import styled, { css } from 'react-emotion';
 
 const Table = ({ table, toPercent }) => (
   <div
-    css={css`
+    className={css`
       display: table;
       margin-top: 10px;
   `}
   >
     {table.map((row, i) => (
       <div
-        css={css`
+        className={css`
         display: table-row;
         `}
         key={i}
       >
         {row.map((x, j) => (
           <div
-            css={css`
+            className={css`
               display: table-cell;
               padding: 10px;
               background: rgba(74, 174, 53, ${x});

@@ -24,6 +24,7 @@
     "packages/benchmarks/emotion/inline-css",
     "packages/benchmarks/emotion/decouple",
     "packages/benchmarks/emotion/over-bridge",
+    "packages/benchmarks/emotion/over-bridge-memo",
     "packages/benchmarks/glam/inline-style",
     "packages/benchmarks/glam/simple",
     "packages/benchmarks/glamorous/dynamic-styles",

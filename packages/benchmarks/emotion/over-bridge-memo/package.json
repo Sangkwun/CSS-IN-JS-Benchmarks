@@ -1,0 +1,27 @@
+{
+  "name": "table-emotion-over-bridge-memo-big-table",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "devServer --package emotion/over-bridge-memo",
+    "build": "devBuild --package emotion/over-bridge-memo"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "benchmarks-utils": "1.0.0",
+    "@arr/foreach": "^0.1.0",
+    "@arr/map": "^0.1.0",
+    "emotion": "^8.0.12",
+    "babel-plugin-emotion": "^8.0.12",
+    "react-emotion": "^8.0.12"
+  },
+  "devDependencies": {
+    "dev-tasks": "1.0.0"
+  },
+  "benchmarks": {
+    "name": "emotion-over-bridge-memo",
+    "useInlineStyles": true,
+    "useCSS": true,
+    "link": "https://github.com/emotion-js/emotion"
+  }
+}
