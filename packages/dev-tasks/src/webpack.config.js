@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const chalk = require('chalk');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const { argv } = require('yargs');
 const packageName = argv.package;
@@ -29,7 +29,7 @@ console.log(
 );
 
 const plugins = [
-  new webpack.optimize.CommonsChunkPlugin({
+  new webpack.optimize.SplitChunksPlugin({
     name: 'vendor',
     minChunks: Infinity,
     filename: 'vendor.bundle.js',
@@ -37,7 +37,6 @@ const plugins = [
   new webpack.EnvironmentPlugin({
     NODE_ENV: process.NODE_ENV,
   }),
-  new webpack.NamedModulesPlugin(),
 ];
 
 if (isProd) {
@@ -46,24 +45,8 @@ if (isProd) {
       minimize: true,
       debug: false,
     }),
-    new ExtractTextPlugin('styles.css'),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false,
-        screw_ie8: true,
-        conditionals: true,
-        unused: true,
-        comparisons: true,
-        sequences: true,
-        dead_code: true,
-        evaluate: true,
-        if_return: true,
-        join_vars: true,
-      },
-      output: {
-        comments: false,
-      },
-    })
+    new MiniCssExtractPlugin()
+    // new webpack.optimize.minimize()
   );
 } else {
   plugins.push(new webpack.HotModuleReplacementPlugin());
@@ -87,7 +70,7 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: 'file-loader',
-          query: {
+          options: {
             name: '[name].[ext]',
           },
         },
@@ -96,16 +79,18 @@ module.exports = {
         test: /\.(js|jsx)$/,
         include: sourcePath,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
       {
         test: /\.css$/,
         exclude: /node_modules/,
         use: isProd
-          ? ExtractTextPlugin.extract({
-              fallback: 'style-loader',
-              use: { loader: 'css-loader', options: { sourceMap: true } },
-            })
+          ? [MiniCssExtractPlugin.loader, 'css-loader']
           : [
               'style-loader',
               {

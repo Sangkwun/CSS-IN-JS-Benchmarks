@@ -25,6 +25,11 @@ const config = {
       },
     ],
   },
+  resolve: {
+    alias: {
+      core: path.join(__dirname, 'core'),
+    },
+  },
 };
 
 module.exports = config;

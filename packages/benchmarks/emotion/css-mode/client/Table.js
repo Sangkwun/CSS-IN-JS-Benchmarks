@@ -19,7 +19,7 @@ const cellClass = css`
 const Table = ({ table, toPercent }) => (
   <div className={tableClass}>
     {table.map((row, i) => (
-      <div className={css(rowClass, blueClass)} key={i}>
+      <div className={css(rowClass)} key={i}>
         {row.map((x, j) => (
           <div
             className={cellClass}

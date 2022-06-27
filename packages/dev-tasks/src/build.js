@@ -18,8 +18,10 @@ compiler.run((err, stats) => {
     const space = '    ';
 
     info.errors.map(err => {
-      console.log('');
-      console.log(space + err.split('\n').slice(0, 3).join('\n' + space));
+      if (!err) {
+        return;
+      }
+      console.log(err);
       console.log('');
 
       process.exit(1);
