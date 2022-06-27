@@ -21,6 +21,7 @@
     "packages/benchmarks/emotion/simple",
     "packages/benchmarks/emotion/extract-static",
     "packages/benchmarks/emotion/css-mode",
+    "packages/benchmarks/emotion/inline-css",
     "packages/benchmarks/emotion/decouple",
     "packages/benchmarks/emotion/over-bridge",
     "packages/benchmarks/glam/inline-style",
