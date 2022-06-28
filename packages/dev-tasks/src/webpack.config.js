@@ -53,6 +53,12 @@ if (isProd) {
   plugins.push(new webpack.HotModuleReplacementPlugin());
 }
 
+const presetReactOption = { runtime: 'automatic' };
+
+if (packageName === 'emotion/inline-css') {
+  presetReactOption['importSource'] = '@emotion/react';
+}
+
 module.exports = {
   devtool: isProd ? 'source-map' : 'eval',
   context: sourcePath,
@@ -85,10 +91,7 @@ module.exports = {
           options: {
             presets: [
               '@babel/preset-env',
-              [
-                '@babel/preset-react',
-                { runtime: 'automatic', importSource: '@emotion/react' },
-              ],
+              ['@babel/preset-react', presetReactOption],
             ],
             plugins: [
               [
