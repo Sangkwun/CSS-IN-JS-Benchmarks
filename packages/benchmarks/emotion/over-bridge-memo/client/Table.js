@@ -5,17 +5,12 @@ import { buildStyles } from './utils';
 
 export const Component = styled.div`
   ${props => {
-  console.log(props);
-  try {
-    const style = useMemo(
-      () => {
-        return buildStyles(props);
-      },
-      [props]
-    );
-  } catch (e) {
-    console.log(e);
-  }
+  const style = useMemo(
+    () => {
+      return buildStyles(props);
+    },
+    [props]
+  );
   return buildStyles(props);
 }}
 `;
