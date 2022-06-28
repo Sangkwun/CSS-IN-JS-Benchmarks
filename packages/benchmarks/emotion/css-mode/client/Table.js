@@ -17,12 +17,12 @@ const cellClass = css`
 `;
 
 const Table = ({ table, toPercent }) => (
-  <div className={tableClass}>
+  <div css={tableClass}>
     {table.map((row, i) => (
-      <div className={css(rowClass)} key={i}>
+      <div css={css(rowClass)} key={i}>
         {row.map((x, j) => (
           <div
-            className={cellClass}
+            css={cellClass}
             key={`${i}${j}`}
             style={{ background: `rgba(74, 174, 53, ${x})` }}
           >

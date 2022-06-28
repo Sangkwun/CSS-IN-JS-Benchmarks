@@ -55,7 +55,7 @@ if (isProd) {
 
 const presetReactOption = { runtime: 'automatic' };
 
-if (packageName === 'emotion/inline-css') {
+if (['emotion/inline-css', 'emotion/css-mode'].includes(packageName)) {
   presetReactOption['importSource'] = '@emotion/react';
 }
 

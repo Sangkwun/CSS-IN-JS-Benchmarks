@@ -22,6 +22,18 @@ const config = {
         test: /(\.jsx|\.js)$/,
         loader: 'babel-loader',
         exclude: /(node_modules|bower_components)/,
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react'],
+          plugins: [
+            [
+              '@emotion/babel-plugin',
+              {
+                sourceMap: true,
+                autoLabel: 'always',
+              },
+            ],
+          ],
+        },
       },
     ],
   },
