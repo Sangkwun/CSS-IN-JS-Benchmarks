@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// process.env.NODE_ENV = 'development';
+process.env.NODE_ENV = 'development';
 const webpackDevServer = require('webpack-dev-server');
 const webpack = require('webpack');
 
@@ -9,9 +9,7 @@ const compiler = webpack(webpackConfig);
 const server = new webpackDevServer(
   {
     hot: false,
-    client: {
-      logging: 'error',
-    },
+    client: false,
   },
   compiler
 );

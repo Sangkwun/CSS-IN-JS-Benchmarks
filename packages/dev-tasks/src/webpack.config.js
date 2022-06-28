@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const chalk = require('chalk');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const EmotionBabelPlugin = require('@emotion/babel-plugin');
 
 const { argv } = require('yargs');
 const packageName = argv.package;
@@ -82,7 +83,19 @@ module.exports = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env'],
+            presets: [
+              '@babel/preset-env',
+              ['@babel/preset-react', { runtime: 'automatic' }],
+            ],
+            plugins: [
+              [
+                '@emotion/babel-plugin',
+                {
+                  sourceMap: true,
+                  autoLabel: 'always',
+                },
+              ],
+            ],
           },
         },
       },
