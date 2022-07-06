@@ -10,9 +10,10 @@
     "packages/benchmarks/emotion/decouple",
     "packages/benchmarks/emotion/use-style",
     "packages/benchmarks/emotion/use-style-memo",
-    "packages/benchmarks/react",
-    "packages/benchmarks/react-inline-styles",
-    "packages/benchmarks/react-css"
+    "packages/benchmarks/react/no-style",
+    "packages/benchmarks/react/inline-styles",
+    "packages/benchmarks/react/css",
+    "packages/benchmarks/tailwind/pure"
   ],
   "version": "1.0.0"
 }

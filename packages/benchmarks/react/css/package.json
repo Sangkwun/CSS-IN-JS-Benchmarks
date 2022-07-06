@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "devServer --package react-css",
-    "build": "devBuild --package react-css"
+    "start": "devServer --package react/css",
+    "build": "devBuild --package react/css"
   },
   "license": "MIT",
   "dependencies": {

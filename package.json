@@ -8,6 +8,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "@babel/runtime-corejs2": "^7.0.0",
+    "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "babel-plugin-add-module-exports": "1.0.4",
     "connect": "^3.7.0",
@@ -20,6 +21,8 @@
     "lighthouse": "4.2.0",
     "lint-staged": "3.4.0",
     "mini-css-extract-plugin": "^2.6.1",
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
     "prettier": "1.2.2",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
@@ -45,13 +48,16 @@
     "@babel/eslint-parser": "^7.18.2",
     "@emotion/babel-plugin": "^11.9.2",
     "@emotion/react": "^11.9.3",
+    "@headlessui/react": "^1.6.5",
+    "@heroicons/react": "^1.0.6",
     "ansi-html-community": "^0.0.8",
     "babel-plugin-styled-components": "^2.0.7",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "lodash-es": "^4.17.21",
     "prop-types": "^15.8.1",
     "styled-components": "^5.3.5",
-    "stylis-rule-sheet": "^0.0.10"
+    "stylis-rule-sheet": "^0.0.10",
+    "tailwindcss": "^3.1.4"
   },
   "name": "CSS-IN-JS-Benchmarks"
 }

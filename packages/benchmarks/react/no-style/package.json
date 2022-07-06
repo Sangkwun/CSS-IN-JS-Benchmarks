@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "devServer --package react",
-    "build": "devBuild --package react"
+    "start": "devServer --package react/no-style",
+    "build": "devBuild --package react/no-style"
   },
   "license": "MIT",
   "dependencies": {
