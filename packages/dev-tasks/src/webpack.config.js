@@ -3,7 +3,6 @@ const path = require('path');
 const chalk = require('chalk');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const EmotionBabelPlugin = require('@emotion/babel-plugin');
-
 const { argv } = require('yargs');
 const packageName = argv.package;
 
@@ -38,6 +37,7 @@ const plugins = [
   new webpack.EnvironmentPlugin({
     NODE_ENV: process.NODE_ENV,
   }),
+  new MiniCssExtractPlugin(),
 ];
 
 if (isProd) {
@@ -45,9 +45,7 @@ if (isProd) {
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       debug: false,
-    }),
-    new MiniCssExtractPlugin()
-    // new webpack.optimize.minimize()
+    })
   );
 } else {
   plugins.push(new webpack.HotModuleReplacementPlugin());
@@ -108,15 +106,7 @@ module.exports = {
       {
         test: /\.css$/,
         exclude: /node_modules/,
-        use: isProd
-          ? [MiniCssExtractPlugin.loader, 'css-loader']
-          : [
-              'style-loader',
-              {
-                loader: 'css-loader',
-                options: { sourceMap: true },
-              },
-            ],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
     ],
   },

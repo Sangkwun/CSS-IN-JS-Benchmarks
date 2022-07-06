@@ -9,7 +9,8 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-es2020": "^1.0.2",
-    "benchmarks-utils": "1.0.0"
+    "benchmarks-utils": "1.0.0",
+    "mini-css-extract-plugin":"2.6.1"
   },
   "devDependencies": {
     "dev-tasks": "1.0.0"
