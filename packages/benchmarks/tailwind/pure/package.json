@@ -1,0 +1,24 @@
+{
+  "name": "table-tailwind-pure-big-table",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx tailwindcss -i ./client/input.css -o ./client/output.css && devServer --package tailwind/pure",
+    "build": "npx tailwindcss -i ./client/input.css -o ./client/output.css && devBuild --package tailwind/pure"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "babel-preset-es2020": "^1.0.2",
+    "benchmarks-utils": "1.0.0",
+    "tailwindcss": "^3.1.4",
+    "@headlessui/react": "^1.6.5",
+    "@heroicons/react": "^1.0.6"
+  },
+  "devDependencies": {
+    "dev-tasks": "1.0.0"
+  },
+  "benchmarks": {
+    "name": "tailwind (pure)",
+    "link": "https://tailwindui.com/"
+  }
+}
