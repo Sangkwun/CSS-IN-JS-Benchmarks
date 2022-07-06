@@ -8,7 +8,7 @@ const Table = ({ table, toPercent }) => (
         {row.map((x, j) => (
           <div
             key={`${i}${j}`}
-            className={`table-cell p-2.5 bg-[#49ae35]`}
+            className="table-cell p-[10px] bg-[#49ae35]"
             style={{
               opacity: x,
             }}
