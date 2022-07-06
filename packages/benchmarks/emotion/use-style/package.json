@@ -1,10 +1,10 @@
 {
-  "name": "table-emotion-over-bridge-memo-big-table",
+  "name": "table-emotion-use-style-big-table",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "devServer --package emotion/over-bridge-memo",
-    "build": "devBuild --package emotion/over-bridge-memo"
+    "start": "devServer --package emotion/use-style",
+    "build": "devBuild --package emotion/use-style"
   },
   "license": "MIT",
   "dependencies": {
@@ -22,7 +22,7 @@
     "dev-tasks": "1.0.0"
   },
   "benchmarks": {
-    "name": "emotion-over-bridge-memo",
+    "name": "emotion-use-style",
     "useInlineStyles": true,
     "useCSS": true,
     "link": "https://github.com/emotion-js/emotion"

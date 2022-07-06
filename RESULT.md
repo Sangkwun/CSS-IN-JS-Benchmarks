@@ -3,12 +3,12 @@
 
 Solution | Use CSS | Use Inline-Styles | Mount Time (ms) | Rerender time (ms)
 :--- | :--- | :--- | :--- | :---
-[react (without styles)](https://github.com/facebook/react) | - | - | 22.66 | 31.81
-[react-css](https://github.com/facebook/react) | + | + | 33.35 | 40.79
-[react (with inline-styles)](https://github.com/facebook/react) | - | + | 31 | 46.45
-[emotion-css-mode](https://github.com/emotion-js/emotion) | + | + | 51.17 | 57.22
-[emotion-inline-css](https://github.com/emotion-js/emotion) | - | + | 83.34 | 78.68
-[emotion-simple](https://github.com/emotion-js/emotion) | + | - | 90.78 | 83.76
-[emotion-decouple](https://github.com/emotion-js/emotion) | + | - | 96.28 | 89.23
-[emotion-over-bridge](https://github.com/emotion-js/emotion) | + | + | 141.45 | 121.18
-[emotion-over-bridge-memo](https://github.com/emotion-js/emotion) | + | + | 175.66 | 156.13
+[react (without styles)](https://github.com/facebook/react) | - | - | 23.37 | 32.95
+[react-css](https://github.com/facebook/react) | + | + | 37.17 | 44.77
+[react (with inline-styles)](https://github.com/facebook/react) | - | + | 35.26 | 52.31
+[emotion-css-mode](https://github.com/emotion-js/emotion) | + | + | 51.89 | 56.1
+[emotion-inline-css](https://github.com/emotion-js/emotion) | - | + | 84.79 | 81.67
+[emotion-simple](https://github.com/emotion-js/emotion) | + | - | 91.46 | 87.11
+[emotion-decouple](https://github.com/emotion-js/emotion) | + | - | 97.79 | 89.98
+[emotion-use-style](https://github.com/emotion-js/emotion) | + | + | 148.34 | 121.14
+[emotion-use-style-memo](https://github.com/emotion-js/emotion) | + | + | 188.63 | 170.86

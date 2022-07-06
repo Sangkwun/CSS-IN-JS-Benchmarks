@@ -8,8 +8,8 @@
     "packages/benchmarks/emotion/css-mode",
     "packages/benchmarks/emotion/inline-css",
     "packages/benchmarks/emotion/decouple",
-    "packages/benchmarks/emotion/over-bridge",
-    "packages/benchmarks/emotion/over-bridge-memo",
+    "packages/benchmarks/emotion/use-style",
+    "packages/benchmarks/emotion/use-style-memo",
     "packages/benchmarks/react",
     "packages/benchmarks/react-inline-styles",
     "packages/benchmarks/react-css"
