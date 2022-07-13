@@ -1,0 +1,30 @@
+{
+  "name": "table-emotion-container-v2-big-table",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "devServer --package emotion/container-v2",
+    "build": "devBuild --package emotion/container-v2"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@arr/foreach": "^0.1.0",
+    "@arr/map": "^0.1.0",
+    "@emotion/babel-plugin": "^11.9.2",
+    "@emotion/core": "10.3.1",
+    "@emotion/react": "11.6.0",
+    "@emotion/styled": "11.6.0",
+    "@emotion/utils":"1.1.0",
+    "babel-preset-es2020": "^1.0.2",
+    "benchmarks-utils": "1.0.0"
+  },
+  "devDependencies": {
+    "dev-tasks": "1.0.0"
+  },
+  "benchmarks": {
+    "name": "emotion-container-v2",
+    "useInlineStyles": true,
+    "useCSS": true,
+    "link": "https://github.com/emotion-js/emotion"
+  }
+}
