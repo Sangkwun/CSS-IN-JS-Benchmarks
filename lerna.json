@@ -10,6 +10,7 @@
     "packages/benchmarks/emotion/decouple",
     "packages/benchmarks/emotion/use-style",
     "packages/benchmarks/emotion/use-style-memo",
+    "packages/benchmarks/emotion/container-v2",
     "packages/benchmarks/react/no-style",
     "packages/benchmarks/react/inline-styles",
     "packages/benchmarks/react/css",
