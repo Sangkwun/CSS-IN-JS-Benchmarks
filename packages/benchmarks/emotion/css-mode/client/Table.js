@@ -1,5 +1,6 @@
 import React from 'react';
-import styled, { css } from 'react-emotion';
+import styled from '@emotion/styled';
+import { css } from '@emotion/react';
 
 const tableClass = css`
   display: table;
@@ -16,12 +17,12 @@ const cellClass = css`
 `;
 
 const Table = ({ table, toPercent }) => (
-  <div className={tableClass}>
+  <div css={tableClass}>
     {table.map((row, i) => (
-      <div className={rowClass} key={i}>
+      <div css={css(rowClass)} key={i}>
         {row.map((x, j) => (
           <div
-            className={cellClass}
+            css={cellClass}
             key={`${i}${j}`}
             style={{ background: `rgba(74, 174, 53, ${x})` }}
           >
